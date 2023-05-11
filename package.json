@@ -1,0 +1,33 @@
+{
+  "name": "awesome_app_2023a",
+  "version": "0.0.0",
+  "description": "App for learning ExpressJs",
+  "main": "(index.js) app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelLopezGarcia/awasome-app-2023a.git"
+  },
+  "engines": {
+    "node": "20.0.0",
+    "npm": "9.6.4"
+  },
+  "keywords": [
+    "Express",
+    "ITGAM",
+    "DWPCI",
+    "JavaScript"
+  ],
+  "author": "@Emmanuel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmmanuelLopezGarcia/awasome-app-2023a/issues"
+  },
+  "homepage": "https://github.com/EmmanuelLopezGarcia/awasome-app-2023a#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
