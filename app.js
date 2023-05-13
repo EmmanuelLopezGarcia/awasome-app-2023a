@@ -1,10 +1,20 @@
 // Importar modulo http y exprexx
 import http from "http";
 import express from "express";
-import { nextTick } from "process";
 
 // Crear una instancia de express
 const app = express(); // (req, res) => {UN MONTON DE CODIGO}
+
+// Middleware de proposito especifico
+app.use('/about', (req, res) => {
+
+    res.send(`
+        <h1 style="color: #111" >About ... </h>
+        <p>Esto es una pagina creada para aprender 
+        desarrollo web en Fullstack con JS</p>
+    `);
+
+});
 
 // Registrando el primer middleware(funcion), next es el ultimo en llamar
 app.use((req, res, next) => {
@@ -28,7 +38,7 @@ app.use((req, res, next) => {
     console.log("Middleware que responde");
 
     res.send(`
-        <h1>Welcome to Express</h1>
+        <h1>Bienvenido al Framework Express</h1>
         <p>This is my awesome app</p>
     `);
 
@@ -42,7 +52,7 @@ const port = 3000;
 const ip = "0.0.0.0";
 
 // Arrancar el servidor
-server.listen(port, ip, (err) => {
+app.listen(port, ip, (err) => {
 
     console.log("Funcionando en http://localhost:3000");
 
