@@ -2,6 +2,11 @@
 import http from "http";
 import express from "express";
 
+// Importando http-status
+import httpStatus from "http-status";
+
+import path from 'path';
+
 // Importando el enrutador
 import adminRouter from './routes/admin.routes.js';
 import shopRouter from './routes/shop.routes.js';
@@ -17,6 +22,12 @@ app.use(adminRouter);
 
 // Se agrega ruta de shop
 app.use(shopRouter);
+
+app.use( (req, res) => {
+
+    res.sendFile(path.resolve('views', 'not_found.html'));
+
+});
 
 // Definir puertos
 const port = 3000;
