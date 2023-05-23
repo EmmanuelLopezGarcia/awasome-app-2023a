@@ -18,7 +18,8 @@ const app = express(); // (req, res) => {UN MONTON DE CODIGO}
 app.use(express.urlencoded({ extended: true }));
 
 // Se agrega ruta de administrador 
-app.use(adminRouter);
+// Se agrega un candado para que respete la ruta 'admin'
+app.use('/admin', adminRouter);
 
 // Se agrega ruta de shop
 app.use(shopRouter);
