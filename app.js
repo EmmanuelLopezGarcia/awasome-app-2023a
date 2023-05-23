@@ -12,7 +12,7 @@ const app = express(); // (req, res) => {UN MONTON DE CODIGO}
 // Middleware de parseo de datos del cliente
 app.use(express.urlencoded({ extended: true }));
 
-// Se agrega ruta de administrador
+// Se agrega ruta de administrador 
 app.use(adminRouter);
 
 // Se agrega ruta de shop
