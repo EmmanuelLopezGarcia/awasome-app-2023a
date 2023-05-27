@@ -9,6 +9,9 @@ import { ROOT_DIR } from '../helpers/paths.js';
 // Creando una instancia del enrutador de express
 const router = Router();
 
+// Creando datos en la memoria volatil
+export const products = [];
+
 // Formulario agregar producto
 // Get /add-product
 router.get('/add-product', (req, res, next) => {
@@ -34,7 +37,9 @@ router.post('/add-product', (req, res) => {
     // REalizaremos la extraccion de parametros
     // dentro de la peticion
 
-    console.log(req.body);
+    const { title } = req.body;
+
+    products.push(title);
 
     res.redirect('/');
 
