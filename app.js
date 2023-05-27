@@ -11,11 +11,17 @@ import path from 'path';
 import adminRouter from './routes/admin.routes.js';
 import shopRouter from './routes/shop.routes.js';
 
+// Importando ROOT_DIR
+import { ROOT_DIR } from "./helpers/paths.js";
+
 // Crear una instancia de express
 const app = express(); // (req, res) => {UN MONTON DE CODIGO}
 
 // Middleware de parseo de datos del cliente
 app.use(express.urlencoded({ extended: true }));
+
+// Se registra el middleware para servidor de archivos estaticos
+app.use(express.static(path.join(ROOT_DIR, 'public')));
 
 // Se agrega ruta de administrador 
 // Se agrega un candado para que respete la ruta 'admin'
