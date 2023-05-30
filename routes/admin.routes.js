@@ -26,8 +26,9 @@ router.get('/add-product', (req, res, next) => {
 
     console.log(`ROOT_DIR:${ROOT_DIR}`);
 
-    res.sendFile(path.resolve(ROOT_DIR, 'views', 'add-product.html'));
+    //res.sendFile(path.resolve(ROOT_DIR, 'views', 'add-product.html'));
     
+    res.render('add-product');
 
 });
 

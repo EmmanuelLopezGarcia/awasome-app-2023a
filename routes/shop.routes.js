@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
 
     console.log("Sirviendo la ruta '/'");
 
-    res.sendFile(path.resolve('views', 'shop.html'));
+    // res.sendFile(path.resolve('views', 'shop.html'));
+
+    res.render('shop');
 
 });
 
