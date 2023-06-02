@@ -30,7 +30,7 @@ router.get('/add-product', (req, res, next) => {
     
     res.render('add-product', {
         addProduct: 'active', 
-        viewStyle: '/css/product.css',
+        viewStyle: '/css/add-product.css',
         docTitle: "Add Product"
         });
 
