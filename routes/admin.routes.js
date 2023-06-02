@@ -28,7 +28,11 @@ router.get('/add-product', (req, res, next) => {
 
     //res.sendFile(path.resolve(ROOT_DIR, 'views', 'add-product.html'));
     
-    res.render('add-product');
+    res.render('add-product', {
+        addProduct: 'active', 
+        viewStyle: '/css/product.css',
+        docTitle: "Add Product"
+        });
 
 });
 

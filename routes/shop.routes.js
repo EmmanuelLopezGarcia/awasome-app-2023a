@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 
     // res.sendFile(path.resolve('views', 'shop.html'));
 
-    res.render('shop');
+    res.render('shop', {shop: 'active', docTitle: "Shop"});
 
 });
 
