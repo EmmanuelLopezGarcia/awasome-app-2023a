@@ -12,6 +12,7 @@ import path from 'path';
 // Importando el enrutador
 import adminRouter from './routes/admin.routes.js';
 import shopRouter from './routes/shop.routes.js';
+import error_404 from './routes/http_error.routes.js';
 
 // Importando ROOT_DIR
 import { ROOT_DIR } from "./helpers/paths.js";
@@ -51,11 +52,8 @@ app.use('/admin', adminRouter);
 // Se agrega ruta de shop
 app.use(shopRouter);
 
-app.use( (req, res) => {
-
-    res.sendFile(path.resolve('views', 'not_found.html'));
-
-});
+// Se agrega ruta 404
+app.use(error_404);
 
 // Definir puertos
 const port = 3000;
